@@ -16,398 +16,339 @@
 <link rel="stylesheet" href="https://use.typekit.net/llq7fod.css">
 <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<script type="text/javascript">
-	/*<![CDATA[*/
-		//fill in hidden form data
-		//------------------------
-		var timer = 0;
-		var interval = 100;
-		var waituntil = 12000;
 
-		var tid = setInterval( function () {
-			if ( document.readyState !== 'complete' ) return;
-			clearInterval(tid);
-			formDetection();
-		}, 100 );
-
-		function formDetection() {
-			//grab html element values
-
-			var urlfield = document.getElementById("form_14f287ce-6e1d-42f3-854a-a12592e407e9");
-
-			//check if URL field exists in the DOM
-			if (urlfield) {
-				//hide form detection messages
-				document.getElementById("error-placeholder").style.display = "none";
-
-				//set additional form values
-				formExtras(urlfield);
-
-			} else {
-				//add interval to timer
-				timer += interval;
-				//check if the timer has exceeded maximum wait time
-				if (timer > waituntil) {
-					//show form load error message
-					document.getElementById("error-placeholder").style.display = "block";
-					//continue trying to load the form
-					setTimeout("formDetection()", interval);
-				} else {
-					//loop
-					setTimeout("formDetection()", interval);
-				}
-			}
-		}
-
-
-		//helper functions
-		//-----------------
-
-		//set form hidden fields
-		function formExtras(urlfield) {
-			
-			//check if URL field exists in the DOM
-			if (urlfield) {
-				//set the value of the URL field to the current browser URL
-				urlfield.value = document.location.href;
-			}
-		}
-
-		/*]]>*/
-
-	</script>
 <style>
-html {
---color_blue:#0057b7;
---color_gray:#eff0f0;
---mobile_subhead:30px;
-}
-body {
-    background: #ffffff;
-    font-family: "Tenso", sans-serif;
-}
-footer {
-    background: #0e4174;
-    font-size: 13px;
-    font-weight: 300;
-    color: #fff;
-}
-footer a {
-    color: #fff;
-}
-footer h3 {
-    color: #fff;
-    font-weight: 200;
-    font-size: 22px;
-}
-.copyright {
-    border-top: 1px solid #fff;
-}
-h1, h2, h3, h4, h5, h6 {
-    color: var(--color_blue);
-}
-h1 {
-    font-size: 60px;
-    line-height: .9em;
-    font-weight: 800;
-}
-h2 {
-    font-size: 30px;
-    font-weight: 300;
-    line-height: 1em;
-    letter-spacing: -.03em;
-    padding: 15px 0;
-}
-h3 {
-    font-size: 45px;
-    font-weight: 600;
-    line-height: 1em;
-    letter-spacing: -.03em;
-    padding: 25px 0 0 0;
-}
-.btn {
-    background: var(--color_blue);
-    border: 0;
-    font-weight: 300;
-}
-.btn-primary {
-    min-width: 70vw;
-    font-size: 30px;
-    border-radius: 0;
-    margin-bottom: 20px;
-    padding: 8px 30px;
-}
-.mobile_hero {
-    background: url(img/hero_photo_mobile.jpg) no-repeat;
-    background-size: cover;
-    background-position: top center;
-    width: 100vw;
-    aspect-ratio: 1 / 1;
-}
-#video_poster {
-    width: 100%;
-    height: auto;
-}
-.stats > div > div:first-child {
-    font-size: 56px;
-    font-weight: 600;
-    line-height: 1em;
-    letter-spacing: -.03em;
-    color: var(--color_blue);
-    padding-bottom: 5px;
-    margin-bottom: 0;
-}
-.stats > div > div:last-child {
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 1em;
-    letter-spacing: -.03em;
-    color: var(--color_blue);
-}
-.real_world {
-    background: var(--color_blue);
-    position: relative;
-    color: #fff;
-    font-size: var(--mobile_subhead);
-    line-height: 1em;
-}
-.real_world h1 {
-    color: #fff;
-}
-#realworld_buildings {
-    width: 40vw;
-    max-width: 380px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-.ready_container {
-    color: var(--color_blue);
-    font-size: var(--mobile_subhead);
-    line-height: 1em;
-}
-.ready_container img {
-    width: 100%;
-    height: auto;
-}
-.ready_container a {
-    bottom: 0;
-}
-.carousel{
-        width: 100%;
-}
-.Xcarousel .item img{
-    height: 90vw;
-    max-width: inherit;
-    width: inherit;
-}
-.slide {
-    background: var(--color_gray);
-}
-.slide h3 {
-    width: 100%;
-    padding: 10px 20px;
-    min-height: 220px;
-}
-.slide img {
-    width: 100%;
-    height: auto;
-}
-.slider_nav {
-    position: relative;
-    bottom: 0px;
-}
-.slider_nav > a {
-    background-image: url("img/slider_nav_arrow.svg");
-    background-repeat: no-repeat;
-    background-size: 34px auto;
-    background-position: 12px 18px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 1px solid #000;
-    display: inline-block;
-    margin-left: 20px;
-    transition: all .25s ease-out;
-}
-    .slider_nav a:hover{
-        background-color: #fff;
-    }
-.slider_nav_prev {
-}
-.slider_nav_next {
-    transform: scaleX(-1);
-}
-.intern_container {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-bottom: 40px;
-    border-bottom: 1px solid var(--color_blue);
-}
-.intern_container > div div {
-    display: flex;
-    align-items: center;
-}
-.intern_container > div div:last-child {
-    max-width: 240px;
-}
-.alumni_container {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 1em;
-    color: var(--color_blue);
-}
-#alumni_headshots {
-    width: 100%;
-    height: auto;
-    max-width: 450px;
-}
-#arrow_rightangle {
-    display: block;
-    padding-top: 20px;
-    max-width: 65px;
-}
-#logos {
-    width: 100%;
-    height: auto;
-}
-.form_container {
-    background: var(--color_gray);
-}
-.form_container h1 {
-    color: var(--color_blue);
-}
-.form_inst {
-    color: var(--color_blue);
-    font-size: var(--mobile_subhead);
-}
-.slate-form input {
-    background: transparent;
-    border: 0;
-    border-bottom: 1px solid var(--color_blue);
-    width: 100%;
-}
-.slate-form label {
-    color: rgba(31, 90, 169, .7);
-    font-size: 22px;
-}
-.slate-form button {
-    background: var(--color_blue);
-    color: #fff;
-    font-size: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-right: 20px;
-    padding: 8px 30px;
-}
-.logo_bar {
-    background: var(--color_blue);
-}
-.logo_bar > div {
-    max-width: 1300px;
-}
-#logo {
-    max-width: 80px;
-    transform: translateX(-50%);
-    left: 50%;
-    position: relative;
-}
+	html {
+	--color_blue:#0057b7;
+	--color_gray:#eff0f0;
+	--mobile_subhead:30px;
+	}
+	body {
+		background: #ffffff;
+		font-family: "Tenso", sans-serif;
+	}
+	footer {
+		background: #0e4174;
+		font-size: 13px;
+		font-weight: 300;
+		color: #fff;
+	}
+	footer a {
+		color: #fff;
+	}
+	footer h3 {
+		color: #fff;
+		font-weight: 200;
+		font-size: 22px;
+	}
+	.copyright {
+		border-top: 1px solid #fff;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		color: var(--color_blue);
+	}
+	h1 {
+		font-size: 60px;
+		line-height: .9em;
+		font-weight: 800;
+	}
+	h2 {
+		font-size: 30px;
+		font-weight: 300;
+		line-height: 1em;
+		letter-spacing: -.03em;
+		padding: 15px 0;
+	}
+	h3 {
+		font-size: 45px;
+		font-weight: 600;
+		line-height: 1em;
+		letter-spacing: -.03em;
+		padding: 25px 0 0 0;
+	}
+	.btn {
+		background: var(--color_blue);
+		border: 0;
+		font-weight: 300;
+	}
+	.btn-primary {
+		min-width: 70vw;
+		font-size: 30px;
+		border-radius: 0;
+		margin-bottom: 20px;
+		padding: 8px 30px;
+	}
+	.mobile_hero {
+		background: url(img/hero_photo_mobile.jpg) no-repeat;
+		background-size: cover;
+		background-position: top center;
+		width: 100vw;
+		aspect-ratio: 1 / 1;
+	}
+	#video_poster {
+		width: 100%;
+		height: auto;
+	}
+	.stats > div > div:first-child {
+		font-size: 56px;
+		font-weight: 600;
+		line-height: 1em;
+		letter-spacing: -.03em;
+		color: var(--color_blue);
+		padding-bottom: 5px;
+		margin-bottom: 0;
+	}
+	.stats > div > div:last-child {
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 1em;
+		letter-spacing: -.03em;
+		color: var(--color_blue);
+	}
+	.real_world {
+		background: var(--color_blue);
+		position: relative;
+		color: #fff;
+		font-size: var(--mobile_subhead);
+		line-height: 1em;
+	}
+	.real_world h1 {
+		color: #fff;
+	}
+	#realworld_buildings {
+		width: 40vw;
+		max-width: 380px;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+	.ready_container {
+		color: var(--color_blue);
+		font-size: var(--mobile_subhead);
+		line-height: 1em;
+	}
+	.ready_container img {
+		width: 100%;
+		height: auto;
+	}
+	.ready_container a {
+		bottom: 0;
+	}
+	.carousel{
+			width: 100%;
+	}
+	.Xcarousel .item img{
+		height: 90vw;
+		max-width: inherit;
+		width: inherit;
+	}
+	.slide {
+		background: var(--color_gray);
+	}
+	.slide h3 {
+		width: 100%;
+		padding: 10px 20px;
+		min-height: 220px;
+	}
+	.slide img {
+		width: 100%;
+		height: auto;
+	}
+	.slider_nav {
+		position: relative;
+		bottom: 0px;
+	}
+	.slider_nav > a {
+		background-image: url("img/slider_nav_arrow.svg");
+		background-repeat: no-repeat;
+		background-size: 34px auto;
+		background-position: 12px 18px;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		border: 1px solid #000;
+		display: inline-block;
+		margin-left: 20px;
+		transition: all .25s ease-out;
+	}
+		.slider_nav a:hover{
+			background-color: #fff;
+		}
+	.slider_nav_prev {
+	}
+	.slider_nav_next {
+		transform: scaleX(-1);
+	}
+	.intern_container {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		margin-bottom: 40px;
+		border-bottom: 1px solid var(--color_blue);
+	}
+	.intern_container > div div {
+		display: flex;
+		align-items: center;
+	}
+	.intern_container > div div:last-child {
+		max-width: 240px;
+	}
+	.alumni_container {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		font-size: 30px;
+		font-weight: 600;
+		line-height: 1em;
+		color: var(--color_blue);
+	}
+	#alumni_headshots {
+		width: 100%;
+		height: auto;
+		max-width: 450px;
+	}
+	#arrow_rightangle {
+		display: block;
+		padding-top: 20px;
+		max-width: 65px;
+	}
+	#logos {
+		width: 100%;
+		height: auto;
+	}
+	.form_container {
+		background: var(--color_gray);
+	}
+	.form_container h1 {
+		color: var(--color_blue);
+	}
+	.form_inst {
+		color: var(--color_blue);
+		font-size: var(--mobile_subhead);
+	}
+	.slate-form input {
+		background: transparent;
+		border: 0;
+		border-bottom: 1px solid var(--color_blue);
+		width: 100%;
+	}
+	.slate-form label {
+		color: rgba(31, 90, 169, .7);
+		font-size: 22px;
+	}
+	.slate-form button {
+		background: var(--color_blue);
+		color: #fff;
+		font-size: 15px;
+		border: 0;
+		border-radius: 0;
+		margin-right: 20px;
+		padding: 8px 30px;
+	}
+	.logo_bar {
+		background: var(--color_blue);
+	}
+	.logo_bar > div {
+		max-width: 1300px;
+	}
+	#logo {
+		max-width: 80px;
+		transform: translateX(-50%);
+		left: 50%;
+		position: relative;
+	}
 
-@media (min-width: 576px) {
-h1 {
-    font-size: 65px;
-}
-h2 {
-    font-size: 32px;
-    font-weight: 600;
-    letter-spacing: -.03em;
-    padding: 15px 0;
-}
-h3 {
-    font-size: 30px;
-    letter-spacing: -.03em;
-    padding: 25px 0 0 0;
-}
-#logo_horz {
-    max-width: 240px;
-}
-.hero {
-    background: url("img/hero_photo.jpg") no-repeat;
-    background-position: center right;
-    background-size: cover;
-    min-height: 330px;
-}
-.hero > .container {
-    padding: 45px 0;
-}
-.hero h1 {
-    color: #fff;
-}
-h3 {
-}
-.btn-primary {
-    font-size: 15px;
-    border-radius: 0;
-    margin-right: 20px;
-    margin-bottom: 0px;
-    min-width: inherit;
-}
-#arrow_blue {
-/* transform: translateY(50px);*/
-}
+	@media (min-width: 576px) {
+	h1 {
+		font-size: 65px;
+	}
+	h2 {
+		font-size: 32px;
+		font-weight: 600;
+		letter-spacing: -.03em;
+		padding: 15px 0;
+	}
+	h3 {
+		font-size: 30px;
+		letter-spacing: -.03em;
+		padding: 25px 0 0 0;
+	}
+	#logo_horz {
+		max-width: 240px;
+	}
+	.hero {
+		background: url("img/hero_photo.jpg") no-repeat;
+		background-position: center right;
+		background-size: cover;
+		min-height: 330px;
+	}
+	.hero > .container {
+		padding: 45px 0;
+	}
+	.hero h1 {
+		color: #fff;
+	}
+	h3 {
+	}
+	.btn-primary {
+		font-size: 15px;
+		border-radius: 0;
+		margin-right: 20px;
+		margin-bottom: 0px;
+		min-width: inherit;
+	}
+	#arrow_blue {
+	/* transform: translateY(50px);*/
+	}
 
-.slider_nav {
-    position: absolute;
-    right: 20px;
-    bottom: 10px;
-    height: 50px;
-}
-.slider_nav > a {
-    background: url("img/slider_nav_arrow.svg") no-repeat;
-    background-size: 17px auto;
-    background-position: 6px 9px;
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    margin-left: 10px;
-}
-.slide h3 {
-   max-width: 70%;
-    min-height: 85px;
-}
-.form_inst {
-    font-size: 22px;
-}
-.ready_container {
-    font-size: 18px;
-}
-.real_world {
-    font-size: 22px;
-}
-}
+	.slider_nav {
+		position: absolute;
+		right: 20px;
+		bottom: 10px;
+		height: 50px;
+	}
+	.slider_nav > a {
+		background: url("img/slider_nav_arrow.svg") no-repeat;
+		background-size: 17px auto;
+		background-position: 6px 9px;
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		margin-left: 10px;
+	}
+	.slide h3 {
+	   max-width: 70%;
+		min-height: 85px;
+	}
+	.form_inst {
+		font-size: 22px;
+	}
+	.ready_container {
+		font-size: 18px;
+	}
+	.real_world {
+		font-size: 22px;
+	}
+	}
 
-@media (min-width: 768px) and (max-width: 991px) {
-.alumni_container {
-    font-size: 24px;
-}
-.slide h3 {
-   max-width:60%;
-}
-}
+	@media (min-width: 768px) and (max-width: 991px) {
+	.alumni_container {
+		font-size: 24px;
+	}
+	.slide h3 {
+	   max-width:60%;
+	}
+	}
 
-@media (min-width: 992px) {
-.hero {
-    background-position: top right;
-}
-.alumni_container {
-    font-size: 30px;
-}
-.slide h3 {
-   max-width: 50%;
-}
-}
+	@media (min-width: 992px) {
+	.hero {
+		background-position: top right;
+	}
+	.alumni_container {
+		font-size: 30px;
+	}
+	.slide h3 {
+	   max-width: 50%;
+	}
+	}
 </style>
 </head>
 <body>
@@ -564,14 +505,159 @@ h3 {
             <div class="form_inst pb-4">Fill out the form to get started.</div>
           </div>
         </div>
-          <div class="container  pl-md-0 pl-3">
-        <div class="slate-form p30-b">
-          <div id="error-placeholder" style="display:none;"> If the form fails to load or displays incorrectly, <a href="http://www.depaul.edu/admission-and-aid/Pages/request-info.aspx" target="_blank"> click here</a> to fill out an alternate form. <br />
-            <br />
-          </div>
-          <div id="form_603c75bf-1d77-4f22-9603-3fc16b8484e1">Loading...</div>
-          <script>/*<![CDATA[*/var script = document.createElement('script'); script.async = 1; script.src = 'https://grad.depaul.edu/register/?id=603c75bf-1d77-4f22-9603-3fc16b8484e1&output=embed&div=form_603c75bf-1d77-4f22-9603-3fc16b8484e1' + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);/*]]>*/</script> 
-        </div>
+          <div class="container  pl-md-0 pl-3" style="min-height: 500px;">
+          
+          <!-- Radio buttons to toggle content -->
+			<input type="radio" id="option1" name="toggle" onclick="showForm('undergraduate');">
+			<label for="option1">Undergrad</label>
+
+			<input type="radio" id="option2" name="toggle" onclick="showForm('graduate');">
+			<label for="option2">Graduate</label>
+
+			<div id="slate-form">
+				<div id="error-placeholder" style="display:none;">
+					If the form fails to load or displays incorrectly, <a href="http://www.depaul.edu/admission-and-aid/Pages/request-info.aspx" target="_blank">
+					click here</a> to fill out an alternate form.
+					<br /><br />
+				</div>
+				<div id="formPlacement"></div>
+			</div>
+
+ <script type="text/javascript">
+	/*<![CDATA[*/
+		//fill in hidden form data
+		//------------------------
+		var timer = 0;
+		var interval = 100;
+		var waituntil = 12000;
+
+		function formKickOff(formName){
+			var tid = setInterval( function () {
+				if ( document.readyState !== 'complete' ) return;
+				clearInterval(tid); 
+				if (formName == "undergraduate"){
+					formDetectionUndergrad();
+				} else {
+					formDetectionGrad();	
+				}   
+				
+			}, 100 );
+		}
+
+		function formDetectionGrad() {
+			//grab html element values
+			var urlfield = document.getElementById("form_14f287ce-6e1d-42f3-854a-a12592e407e9");	
+			
+			//check if URL field exists in the DOM
+			if (urlfield) {
+				//hide form detection messages
+				document.getElementById("error-placeholder").style.display = "none";
+
+				//set additional form values
+				formExtras(urlfield);
+								
+			} else {
+				//add interval to timer
+				timer += interval;
+				//check if the timer has exceeded maximum wait time
+				if (timer > waituntil) {
+					//show form load error message
+					document.getElementById("error-placeholder").style.display = "block";
+					//continue trying to load the form
+					setTimeout("formDetectionGrad()", interval);
+				} else {
+					//loop
+					setTimeout("formDetectionGrad()", interval);
+				}
+			}			
+		}
+
+		function formDetectionUndergrad() {
+			//grab html element values
+			var checkfield = document.getElementById("form_8d086033-749a-4098-a648-c5f79971bf3a");	
+			
+			//check if field exists in the DOM
+			if (checkfield) {
+				//hide form detection messages
+				document.getElementById("error-placeholder").style.display = "none";
+
+			} else {
+				//add interval to timer
+				timer += interval;
+				//check if the timer has exceeded maximum wait time
+				if (timer > waituntil) {
+					//show form load error message
+					document.getElementById("error-placeholder").style.display = "block";
+					//continue trying to load the form
+					setTimeout("formDetectionUndergrad()", interval);
+				} else {
+					//loop
+					setTimeout("formDetectionUndergrad()", interval);
+				}
+			}			
+		}
+
+
+		//helper functions
+		//-----------------
+
+		//set form hidden fields
+		function formExtras(urlfield) {
+		
+			//check if URL field exists in the DOM
+			if (urlfield) {
+				//set the value of the URL field to the current browser URL
+				urlfield.value = document.location.href;
+			}
+		}
+
+		
+		
+	function showForm(formName){
+		var items = document.getElementsByClassName("slate-form");
+		var i;
+		for (i = 0; i< items.length ; i++)
+		{
+				items[i].remove();
+		}
+		
+
+
+		//create form
+		//-----------
+		var formID, formPath, tyPath, header;
+		if (formName == "undergraduate") {
+			formID = "ef9b0f8f-f1d4-4ce3-8e36-b805588c08ed";
+			formPath = "https://connect.depaul.edu/register/?id=" + formID;
+		} else {
+			formID = "421f4064-42b5-46ed-9cbf-b4b90b4e04c8";
+			formPath = "https://grad.depaul.edu/register/?id=" + formID;
+		}
+
+		
+		var formWrapper = document.createElement('div');
+		formWrapper.setAttribute("class", "slate-form");
+
+		var formDiv = document.createElement('div');
+		formDiv.setAttribute("id", "form_" + formID);
+		formWrapper.appendChild(formDiv);
+
+		var div = document.getElementById("formPlacement");
+		div.parentNode.appendChild(formWrapper);
+
+		var script = document.createElement('script'); 
+		script.async = 1; 
+		script.src= formPath +'&output=embed&div=form_' + formID + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+		formKickOff(formName);
+	}
+/*]]>*/
+
+
+// Set the default state
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('option1').click();
+});
+	</script>
               </div>
       </div>
     </div>
