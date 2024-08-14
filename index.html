@@ -350,6 +350,8 @@
 	}
 	}
 </style>
+<link rel="stylesheet" href="css/form.css">
+
 </head>
 <body>
 <header> </header>
@@ -508,11 +510,13 @@
           <div class="container  pl-md-0 pl-3" style="min-height: 500px;">
           
           <!-- Radio buttons to toggle content -->
-			<input type="radio" id="option1" name="toggle" onclick="showForm('undergraduate');">
-			<label for="option1">Undergrad</label>
-
-			<input type="radio" id="option2" name="toggle" onclick="showForm('graduate');">
-			<label for="option2">Graduate</label>
+      <div class="show_toggle">
+        <input type="radio" id="option1" name="toggle" onclick="showForm('undergraduate');">
+        <label for="option1">Undergrad</label>
+        
+              <input type="radio" id="option2" name="toggle" onclick="showForm('graduate');">
+              <label for="option2">Graduate</label>
+      </div>
 
 			<div id="slate-form">
 				<div id="error-placeholder" style="display:none;">
