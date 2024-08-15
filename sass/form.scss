@@ -60,6 +60,7 @@
     }
   }
   .show_toggle {
+    flex-direction: column;
     font-size: 22px;
     font-weight: 700;
     margin: 0 auto 20px;
@@ -101,9 +102,13 @@
 //     }
 // }
 
+@media (min-width: 992px) {
+    .show_toggle {
+        flex-direction: row;
+    }
+}
 @media (min-width: 576px) {
     .slate-form .form_select select {
     width: 50%;
   }
   }
-  

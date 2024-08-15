@@ -562,14 +562,20 @@ h3 {
         <div class="container  pl-md-0 pl-3">
           
 <!-- Radio buttons to toggle content -->
-			<div class="show_toggle">
-        <div>I am a:</div>
-        <input type="radio" id="option1" name="toggle" onclick="showForm('student');">
-        <label for="option1">Prospective undergraduate</label>
-        <input type="radio" id="option2" name="toggle" onclick="showForm('parent');">
-        <label for="option2">Parent</label>
-        <input type="radio" id="option2" name="toggle" onclick="showForm('parent');">
-        <label for="option2">Prospective Graduate</label>
+			<div class="row show_toggle">
+        <div class="col-12 p-0">I am a:</div>
+        <div>
+            <input type="radio" id="option1" name="toggle" onclick="showForm('student');">
+            <label for="option1">Prospective undergraduate</label>
+        </div>
+        <div>
+            <input type="radio" id="option2" name="toggle" onclick="showForm('parent');">
+            <label for="option2">Parent</label>
+        </div>
+        <div>
+            <input type="radio" id="option2" name="toggle" onclick="showForm('parent');">
+            <label for="option2">Prospective Graduate</label>
+        </div>
       </div>
 
 			<div id="slate-form">
