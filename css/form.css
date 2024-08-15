@@ -42,7 +42,7 @@
   display: block;
 }
 .slate-form .form_select select {
-  width: 50%;
+  width: 100%;
 }
 .slate-form fieldset {
   width: 100%;
@@ -66,6 +66,11 @@
 .show_toggle label {
   padding: 5px 15px 5px 0px;
   font-weight: normal;
+}
+@media (min-width: 576px) {
+  .slate-form .form_select select {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=form.css.map */

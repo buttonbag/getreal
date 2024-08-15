@@ -43,7 +43,7 @@
       display: block;       
     }
 
-    .form_select select {width: 50%;}    
+    .form_select select {width: 100%;}    
 
     fieldset {width: 100%;
 
@@ -100,3 +100,10 @@
 //         }
 //     }
 // }
+
+@media (min-width: 576px) {
+    .slate-form .form_select select {
+    width: 50%;
+  }
+  }
+  
