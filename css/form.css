@@ -59,38 +59,13 @@
 
 .show_toggle {
   font-size: 22px;
+  font-weight: 700;
   margin: 0 auto 20px;
-}
-.show_toggle input[type=radio] {
-  visibility: hidden;
-  width: 0;
-  height: 0;
-  display: none;
+  color: rgba(31, 90, 169, 0.7);
 }
 .show_toggle label {
-  display: table-cell;
-  padding: 5px 15px;
-  background: #deeeff;
-  color: #0057b7;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-.show_toggle input[type=radio]:checked + label {
-  background: #0057b7;
-  color: white;
-}
-
-@media screen and (min-width: 1200px) {
-  .slate-form .form_text {
-    display: flex;
-  }
-  .slate-form .form_text label {
-    margin: 0 15px 0 0;
-    width: 16%;
-  }
-  .slate-form .form_text .form_responses {
-    width: 100%;
-  }
+  padding: 5px 15px 5px 0px;
+  font-weight: normal;
 }
 
 /*# sourceMappingURL=form.css.map */
