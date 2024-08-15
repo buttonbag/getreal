@@ -38,8 +38,11 @@
   font-size: 2.2rem;
   min-height: 500px;
 }
-.slate-form .form_question {
+.slate-form .form_text {
   display: block;
+}
+.slate-form .form_select select {
+  width: 50%;
 }
 .slate-form fieldset {
   width: 100%;
@@ -78,15 +81,15 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .slate-form .form_question {
+  .slate-form .form_text {
     display: flex;
   }
-  .slate-form .form_question label {
+  .slate-form .form_text label {
     margin: 0 15px 0 0;
-    width: 30%;
+    width: 16%;
   }
-  .slate-form .form_question .form_responses {
-    width: 70%;
+  .slate-form .form_text .form_responses {
+    width: 100%;
   }
 }
 

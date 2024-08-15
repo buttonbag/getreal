@@ -430,7 +430,7 @@ h3 {
       <div class="container pl-0">
         <row>
           <div class="col-lg-6 col-md-8 col-12 pr-md-5 pl-0 pr-0 pt-md-0 pt-md-3 pt-5 pb-md-3 pb-5">
-            <h1 class="pb-3">Get <i><em>real</em></i> with your future on day one.</h1>
+            <h1 class="pb-3">Get <i><em><u>real</u></em></i> with your future on day one.</h1>
             <h2 class="d-block pt-0 d-sm-none">At DePaul University, our students aren’t just preparing for the real world. They're living in it.</h2>
             <a href="#requestform" class="btn btn-primary">Request info</a> <a href="https://www.depaul.edu/apply/Pages/default.aspx#undergrad
 " class="btn btn-primary">Apply today</a> </div>
@@ -487,7 +487,7 @@ h3 {
   <section>
     <div class="container pb-5">
       <div class="row">
-        <div class="col-12 pl-0 pr-0"> <img src="img/video_poster.jpg" id="video_poster"> </div>
+        <div class="col-12 pl-0 pr-0"><iframe width="100%" height="550" src="https://www.youtube.com/embed/atuJWrqu1Tw?si=vbSbYwwsC6_nV7_9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
       </div>
     </div>
   </section>
@@ -560,10 +560,11 @@ h3 {
           
 <!-- Radio buttons to toggle content -->
 			<div class="show_toggle">
-        <input type="radio" id="option1" name="toggle" onclick="showForm('undergraduate');">
-        <label for="option1">Undergrad</label>
-        <input type="radio" id="option2" name="toggle" onclick="showForm('graduate');">
-        <label for="option2">Graduate</label>
+                <div>I am a/an:</div>
+        <input type="radio" id="option1" name="toggle" onclick="showForm('student');">
+        <label for="option1">Undergrad Student</label>
+        <input type="radio" id="option2" name="toggle" onclick="showForm('parent');">
+        <label for="option2">Parent of an undergrad student</label>
       </div>
 
 			<div id="slate-form">
@@ -587,27 +588,29 @@ h3 {
 			var tid = setInterval( function () {
 				if ( document.readyState !== 'complete' ) return;
 				clearInterval(tid); 
-				if (formName == "undergraduate"){
-					formDetectionUndergrad();
+				if (formName == "student"){
+					formDetectionStudent();
 				} else {
-					formDetectionGrad();	
+					formDetectionParent();	
 				}   
 				
 			}, 100 );
 		}
 
-		function formDetectionGrad() {
+
+		function formDetectionStudent() {
 			//grab html element values
-			var urlfield = document.getElementById("form_14f287ce-6e1d-42f3-854a-a12592e407e9");	
+			var checkfield = document.getElementById("form_d58640bb-68e1-4efa-8fc2-faf94ed43e76");
 			
-			//check if URL field exists in the DOM
-			if (urlfield) {
+			//check if field exists in the DOM
+			if (checkfield) {
 				//hide form detection messages
 				document.getElementById("error-placeholder").style.display = "none";
 
 				//set additional form values
-				formExtras(urlfield);
+				formExtras(checkfield);
 								
+
 			} else {
 				//add interval to timer
 				timer += interval;
@@ -616,19 +619,19 @@ h3 {
 					//show form load error message
 					document.getElementById("error-placeholder").style.display = "block";
 					//continue trying to load the form
-					setTimeout("formDetectionGrad()", interval);
+					setTimeout("formDetectionStudent()", interval);
 				} else {
 					//loop
-					setTimeout("formDetectionGrad()", interval);
+					setTimeout("formDetectionStudent()", interval);
 				}
 			}			
 		}
-
-		function formDetectionUndergrad() {
+		
+		function formDetectionParent() {
 			//grab html element values
-			var checkfield = document.getElementById("form_8d086033-749a-4098-a648-c5f79971bf3a");	
+			var checkfield = document.getElementById("form_403e34d6-167d-4b70-89de-760ac8b3311f");	
 			
-			//check if field exists in the DOM
+			//check if URL field exists in the DOM
 			if (checkfield) {
 				//hide form detection messages
 				document.getElementById("error-placeholder").style.display = "none";
@@ -641,13 +644,15 @@ h3 {
 					//show form load error message
 					document.getElementById("error-placeholder").style.display = "block";
 					//continue trying to load the form
-					setTimeout("formDetectionUndergrad()", interval);
+					setTimeout("formDetectionParent()", interval);
 				} else {
 					//loop
-					setTimeout("formDetectionUndergrad()", interval);
+					setTimeout("formDetectionParent()", interval);
 				}
 			}			
 		}
+
+		
 
 
 		//helper functions
@@ -678,12 +683,12 @@ h3 {
 		//create form
 		//-----------
 		var formID, formPath, tyPath, header;
-		if (formName == "undergraduate") {
-			formID = "ef9b0f8f-f1d4-4ce3-8e36-b805588c08ed";
+		if (formName == "student") {
+			formID = "fbde168b-dc8e-47a9-ad20-b0d5e1072a29";
 			formPath = "https://connect.depaul.edu/register/?id=" + formID;
-		} else {
-			formID = "421f4064-42b5-46ed-9cbf-b4b90b4e04c8";
-			formPath = "https://grad.depaul.edu/register/?id=" + formID;
+		} else {//parent
+			formID = "47b09ad5-8570-485b-93ea-8293680dcb6a";
+			formPath = "https://connect.depaul.edu/register/?id=" + formID;
 		}
 
 		
