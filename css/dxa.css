@@ -31,11 +31,14 @@
       background-position: center;
     }
   
-    
+/* stats */
     .stats div > div:first-child {
       font-size: 4rem;
     }
-    
+  .stats > div {
+      margin: 1.5rem auto;
+    }
+  
     .real_world {
       margin-top: 0;
     }
@@ -47,6 +50,16 @@
       font-size: 2rem !important;
       line-height: 1.2; 
   }  
+  
+  .slider_nav {
+  display: flex;
+    justify-content: space-between;
+  }
+  .slider_nav a {
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+  }
 
   .video_container {
     height: 260px !important;
