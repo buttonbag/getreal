@@ -1,5 +1,9 @@
+.video_container {
+    height: 560px !important;
+  }
 @media (max-width: 480px) {
   
+    /* global */
     h1, h3 {
       font-size: 2.5rem;
     }
@@ -18,12 +22,15 @@
       min-width: auto;
     }
     
+    /* specifics */
   #logo_horz {
     width: 240px;
   }
     .mobile_hero {
-      height: 200px;
+      height: 260px;
+      background-position: center;
     }
+  
     
     .stats div > div:first-child {
       font-size: 4rem;
@@ -32,9 +39,16 @@
     .real_world {
       margin-top: 0;
     }
-    .carousel h3 {font-size: 1.5rem;}
+
+    /* carousel */
+    .carousel h3 {font-size: 1.5rem; 
+    min-height: auto;}
     .ready_container {
       font-size: 2rem !important;
       line-height: 1.2; 
   }  
+
+  .video_container {
+    height: 260px !important;
+  }
 }
