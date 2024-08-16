@@ -51,4 +51,15 @@
   .video_container {
     height: 260px !important;
   }
+  
+/*   alumni */
+.alumni_container * {
+    font-size: 30px;
+  }
+  
+/*   form section */
+  .form_inst { 
+    font-size: 2rem;
+  }
+
 }
