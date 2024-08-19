@@ -1,6 +1,27 @@
+
+/* video */
 .video_container {
     height: 560px !important;
   }
+
+/* footer */
+
+footer {
+  font-size: 1.8rem;
+}
+
+footer h3 {
+  font-size: 3rem;
+}
+
+footer .social_icons, footer .copyright {
+  font-size: 1.3rem;
+}
+
+footer a:hover {
+  color: #dedede;
+} 
+
 @media (max-width: 480px) {
   
     /* global */
