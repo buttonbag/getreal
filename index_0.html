@@ -601,6 +601,7 @@ h3 {
 		var timer = 0;
 		var interval = 100;
 		var waituntil = 12000;
+		var blnTrack = false;
 
 		function formKickOff(formName){
 			var tid = setInterval( function () {
@@ -754,12 +755,16 @@ h3 {
 
 
 		//GA4 - Custom Event Capture
-		dataLayer.push({
-			event: "dpu_dlpush_user_interaction",
-			interaction_control_value: formName
-		});
-
-
+		//don't track first load
+		if (blnTrack) {
+			dataLayer.push({
+				event: "dpu_dlpush_user_interaction",
+				interaction_control_value: formName
+			});
+		} else {
+			blnTrack = true;
+		}
+		
 		formKickOff(formName);
 	}
 /*]]>*/
