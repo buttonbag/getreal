@@ -1,5 +1,11 @@
 
 // global
+.h1 {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: .9;
+  color: #0057b7;
+}
 // topnav
 // hero
 .subtext {
@@ -16,6 +22,9 @@
   height: 560px !important;
 }
 // real world
+.real_world .h1 {
+  color: #fff;
+}
 // slider
 .slide {
     span {
@@ -91,7 +100,7 @@ color: #dedede;
 }
 @media (max-width: 480px) {
   // global
-  h1, h3 {
+  h1, h3, .h1 {
     font-size: 2.5rem;
   }
   h2 {
