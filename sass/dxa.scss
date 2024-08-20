@@ -2,6 +2,14 @@
 // global
 // topnav
 // hero
+.subtext {
+  padding: 15px 0;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.03em;
+  color: #0057b7;
+}
 // stats
 // video
 .video_container {
@@ -62,6 +70,12 @@ color: #dedede;
   // global
   // topnav
   // hero
+  .subtext {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -.03em;
+    padding: 15px 0;
+  }  
   // stats
   // video
   // real world
@@ -100,6 +114,10 @@ color: #dedede;
     height: 260px;
     background-position: center;
   }
+  .subtext {
+    font-size: 2rem;
+  }
+
   // stats
   .stats div > div:first-child {
     font-size: 4rem;
@@ -121,7 +139,6 @@ color: #dedede;
       font-size: 1.5rem; 
       min-height: auto;
     }
-    
     .slider_nav {
       display: flex;
       justify-content: space-between;
