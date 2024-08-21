@@ -470,8 +470,7 @@ h3 {
         </div>
         <div class="col-md-4 col-6 pr-md-5 pl-0">
           <div>$57 mil</div>
-          <div>in scholarships<br>
-            every year. </div>
+          <div>in scholarships annually to new incoming freshmen.</div>
         </div>
         <div class="col-md-4 col-6 pl-md-0">
           <div>17:1</div>
@@ -543,6 +542,25 @@ h3 {
         </div>
       </div>
     </div>
+	<script>
+	$('.carousel').on('touchstart', function(event){
+		const xClick = event.originalEvent.touches[0].pageX;
+		$(this).one('touchmove', function(event){
+			const xMove = event.originalEvent.touches[0].pageX;
+			const sensitivityInPx = 5;
+
+			if( Math.floor(xClick - xMove) > sensitivityInPx ){
+				$(this).carousel('next');
+			}
+			else if( Math.floor(xClick - xMove) < -sensitivityInPx ){
+				$(this).carousel('prev');
+			}
+		});
+		$(this).on('touchend', function(){
+			$(this).off('touchmove');
+		});
+	});
+	</script>
   </section>
   <section>
     <div class="container alumni_container">
@@ -573,7 +591,7 @@ h3 {
         <div class="col-12 px-0 py-2">I am a:</div>
         <div>
             <input type="radio" id="option1" name="toggle" onclick="showForm('undergrad');">
-            <label for="option1">Prospective undergraduate</label>
+            <label for="option1">Future undergraduate</label>
         </div>
         <div>
             <input type="radio" id="option2" name="toggle" onclick="showForm('parent');">
@@ -581,7 +599,7 @@ h3 {
         </div>
         <div>
             <input type="radio" id="option3" name="toggle" onclick="showForm('grad');">
-            <label for="option3">Prospective graduate</label>
+            <label for="option3">Future graduate</label>
         </div>
       </div>
 
