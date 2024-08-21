@@ -37,7 +37,7 @@
 
 .slate-form {
     font-size: 2.2rem;
-    min-height: 500px;
+    min-height: 320px;
 
     label {
       color: #0057b7;
@@ -69,43 +69,11 @@
     font-weight: 700;
     margin: 0 auto 20px;
     color: #0057b7;
-    // color: rgba(31, 90, 169, .7);
-    // input[type="radio"] {
-    //   visibility: hidden;
-    //   width: 0;
-    //   height: 0;
-    //   display: none;
-    // }
     label {
     padding: 5px 15px 5px 0px;
     font-weight: normal;
-    //   display: table-cell;
-    //   background: #deeeff;
-    //   transition: all .3s ease-in-out;
-    //   cursor: pointer;
-    }
-    input[type="radio"]:checked + label {
-    //   background: #0057b7;
-    //   color: white;
     }
   }
-  
-//   @media screen and (min-width: 1200px) {
-//     .slate-form {
-//         .form_text {
-//             display: flex;
-            
-//             label {
-//                 margin: 0 15px 0 0;
-//                 width: 16%;
-//             }
-//             .form_responses {
-//                 width: 100%;
-                
-//             }
-//         }
-//     }
-// }
 
 @media (min-width: 992px) {
     .show_toggle {
