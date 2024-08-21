@@ -5,6 +5,7 @@
   font-weight: 800;
   line-height: .9;
   color: #0057b7;
+  margin: 0;
 }
 // topnav
 // hero
@@ -120,7 +121,7 @@ color: #dedede;
   }
   // hero
   .mobile_hero {
-    height: 260px;
+    height: 280px;
     background-position: center;
   }
   .subtext {
@@ -146,7 +147,7 @@ color: #dedede;
   .slide {
     span {
       font-size: 1.5rem; 
-      min-height: auto;
+      min-height: 60px;
     }
     .slider_nav {
       display: flex;
