@@ -112,6 +112,7 @@ color: #dedede;
     .slider_nav {
       display: flex;
       justify-content: space-between;
+      overflow: hidden;
     a {
       margin: 0 auto;
       width: 40px;

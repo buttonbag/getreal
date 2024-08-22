@@ -106,6 +106,7 @@ footer a:hover {
   .slide .slider_nav {
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
   }
   .slide .slider_nav a {
     margin: 0 auto;
