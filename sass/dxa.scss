@@ -1,11 +1,12 @@
 
 // global
 .h1 {
-  font-size: 60px;
+  font-size: 65px;
   font-weight: 800;
   line-height: .9;
   color: #0057b7;
   margin: 0;
+  letter-spacing: 0;
 }
 // topnav
 // hero
@@ -58,47 +59,6 @@ footer a:hover {
 color: #dedede;
 } 
 
-
-
-@media (min-width: 992px) {
-  // global
-  // topnav
-  // hero
-  // stats
-  // video
-  // real world
-  // slider
-  .slide {
-    span {
-    max-width: 50%;
-  }}
-  // form
-  // ready container
-  // footer
-}
-@media (min-width: 576px) {
-  // global
-  // topnav
-  // hero
-  .subtext {
-    font-size: 32px;
-    font-weight: 600;
-    letter-spacing: -.03em;
-    padding: 15px 0;
-  }  
-  // stats
-  // video
-  // real world
-  // slider
-  .slide {
-    span {
-    max-width: 70%;
-    min-height: 85px;
-  }}
-  // form
-  // ready container
-  // footer
-}
 @media (max-width: 480px) {
   // global
   h1, h3, .h1 {
@@ -172,10 +132,50 @@ color: #dedede;
     }  
   // footer
 
-/*   alumni */
-.alumni_container * {
+  /*   alumni */
+  .alumni_container * {
   font-size: 30px;
+  }
 }
 
-
+@media (min-width: 576px) {
+  // global
+  // topnav
+  // hero
+  .subtext {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -.03em;
+    padding: 15px 0;
+  }  
+  // stats
+  // video
+  // real world
+  // slider
+  .slide {
+    span {
+    max-width: 70%;
+    min-height: 85px;
+  }}
+  // form
+  // ready container
+  // footer
 }
+@media (min-width: 992px) {
+  // global
+  // topnav
+  // hero
+  // stats
+  // video
+  // real world
+  // slider
+  .slide {
+    span {
+    max-width: 50%;
+  }
+}
+  // form
+  // ready container
+  // footer
+}
+

@@ -1,9 +1,10 @@
 .h1 {
-  font-size: 60px;
+  font-size: 65px;
   font-weight: 800;
   line-height: 0.9;
   color: #0057b7;
   margin: 0;
+  letter-spacing: 0;
 }
 
 .subtext {
@@ -50,24 +51,6 @@ footer a:hover {
   color: #dedede;
 }
 
-@media (min-width: 992px) {
-  .slide span {
-    max-width: 50%;
-  }
-}
-@media (min-width: 576px) {
-  .subtext {
-    font-size: 32px;
-    font-weight: 600;
-    letter-spacing: -0.03em;
-    padding: 15px 0;
-  }
-
-  .slide span {
-    max-width: 70%;
-    min-height: 85px;
-  }
-}
 @media (max-width: 480px) {
   h1, h3, .h1 {
     font-size: 2.5rem;
@@ -144,6 +127,24 @@ footer a:hover {
   /*   alumni */
   .alumni_container * {
     font-size: 30px;
+  }
+}
+@media (min-width: 576px) {
+  .subtext {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    padding: 15px 0;
+  }
+
+  .slide span {
+    max-width: 70%;
+    min-height: 85px;
+  }
+}
+@media (min-width: 992px) {
+  .slide span {
+    max-width: 50%;
   }
 }
 
